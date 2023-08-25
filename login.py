@@ -10,8 +10,8 @@ pic=open("res.1","wb")
 pic.write(pic64)
 
 im = pyautogui.screenshot()
-password = (im.width/2)-620, (im.height/2)-50
-login = (im.width/2)-620, (im.height/2)+50
+password = (im.width/4)*0.67, (im.height/2)*0.915
+login = (im.width/4)*0.67, (im.height/2)*1.08
 game_path="./palia.exe"
 
 def proc_exist(process_name):
@@ -54,7 +54,7 @@ def login_in():
 
 
 while True:
-    regions = list(pyautogui.locateAllOnScreen("res.1"))
+    regions = list(pyautogui.locateAllOnScreen("res.1",grayscale=True))
     if regions: 
         login_in()
         break
