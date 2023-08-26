@@ -1,2 +1,2 @@
 # Palia-Login
-Help you remember Palia login password
+自动登录
